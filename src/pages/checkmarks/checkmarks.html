@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pizza Toppings!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Pizza toppings, do you like them? What kind do you like? <strong>LET'S FIND OUT!</strong></h2>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Pepperoni</ion-label>
+      <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sausage</ion-label>
+      <ion-checkbox [(ngModel)]="sausage"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mushrooms</ion-label>
+      <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dead Salty Fish</ion-label>
+      <ion-checkbox [(ngModel)]="anchovies" disabled="true"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Banana Peppers</ion-label>
+      <ion-checkbox [(ngModel)]="bananaPeppers"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

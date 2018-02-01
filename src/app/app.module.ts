@@ -11,6 +11,7 @@ import { ActionSheetPage } from "../pages/action-sheet/action-sheet";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {CheckmarksPage} from "../pages/checkmarks/checkmarks";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    ActionSheetPage
+    ActionSheetPage,
+    CheckmarksPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    ActionSheetPage
+    ActionSheetPage,
+    CheckmarksPage
   ],
   providers: [
     StatusBar,

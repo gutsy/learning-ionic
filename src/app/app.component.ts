@@ -5,6 +5,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { ActionSheetPage } from "../pages/action-sheet/action-sheet";
+import { CheckmarksPage } from "../pages/checkmarks/checkmarks";
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -33,7 +34,8 @@ export class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title: 'A Test of Buttons', component: ActionSheetPage}
+      { title: 'A Test of Buttons', component: ActionSheetPage},
+      { title: 'Tommy Time', component: CheckmarksPage}
     ];
   }
 
