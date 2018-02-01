@@ -21,7 +21,7 @@ export class CheckmarksPage {
     this.items.push({title: 'Banana Peppers', gross: false});
     this.items.push({title: 'Dead Salty Fish', gross: true});
     this.items.push({title: 'Sausage', gross: false});
-    this.items.push({title: 'Sliced Up Eyeballs', gross: true});
+    this.items.push({title: 'Olives', gross: true});
     this.items.push({title: 'Sun Dried Tomatoes', gross: false});
 
   }
@@ -30,26 +30,25 @@ export class CheckmarksPage {
 
     let index = this.selectedItems.indexOf(item);
     if (index === -1) {
-      if (item.gross) {
-        this.pizzaIsGross = true;
-      }
       this.selectedItems.push(item);
     } else {
       this.selectedItems.splice(index, 1);
-      this.pizzaIsGross = this.isNotDeliciousPizza();
     }
+
+    this.checkPizza();
 
   }
 
-  isNotDeliciousPizza() {
+  checkPizza() {
+    let grossItemFound = false;
      this.selectedItems.forEach( item => {
         if (item.gross) {
           console.log("there's a gross one still here.")
-          return true;
+          grossItemFound = true;
         }
      });
 
-     return false;
+     this.pizzaIsGross = grossItemFound;
   }
 
 

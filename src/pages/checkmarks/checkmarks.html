@@ -22,7 +22,7 @@
   <div *ngIf="selectedItems.length > 0">
     <h3>Your <span *ngIf="pizzaIsGross">fucking disgusting</span><span *ngIf="!pizzaIsGross">delicious</span> pizza will have the following:</h3>
     <ion-list>
-      <div ion-item *ngFor="let item of selectedItems">{{item.title}}</div>
+      <div ion-item *ngFor="let item of selectedItems">{{item.title}} <span *ngIf="item.gross" style="color: red">GROSS, DUDE</span> </div>
     </ion-list>
   </div>
 </ion-content>
