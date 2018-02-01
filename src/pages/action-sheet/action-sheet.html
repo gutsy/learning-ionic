@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Actions!!!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>Let's test out some fucking buttons.</h1>
+  <p><button ion-button color="primary" (click)="showAlert()">Affirmation</button></p>
+  <p><button ion-button color="secondary" (click)="showActionSheet()">Be Honest With Me</button></p>
+  <p><button ion-button color="danger" (click)="showConfirm()">Are You Sure About This?</button></p>
+  <p><button ion-button color="dark" (click)="showPrompt()">Fine. Do it.</button></p>
+</ion-content>
