@@ -9,34 +9,20 @@
 
 
 <ion-content padding>
-  <h2>Pizza toppings, do you like them? What kind do you like? <strong>LET'S FIND OUT!</strong></h2>
+  <h3>Pizza toppings, do you like them? What kind do you like? <strong>LET'S FIND OUT!</strong></h3>
 
   <ion-list>
-
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Sausage</ion-label>
-      <ion-checkbox [(ngModel)]="sausage"></ion-checkbox>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Mushrooms</ion-label>
-      <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Dead Salty Fish</ion-label>
-      <ion-checkbox [(ngModel)]="anchovies" disabled="true"></ion-checkbox>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Banana Peppers</ion-label>
-      <ion-checkbox [(ngModel)]="bananaPeppers"></ion-checkbox>
+    <ion-item ion-item *ngFor="let item of items">
+      <ion-label>{{item.title}}</ion-label>
+      <ion-checkbox (ionChange)="itemChecked(item)"></ion-checkbox>
     </ion-item>
 
   </ion-list>
+
+  <div *ngIf="selectedItems.length > 0">
+    <h3>Your <span *ngIf="pizzaIsGross">fucking disgusting</span><span *ngIf="!pizzaIsGross">delicious</span> pizza will have the following:</h3>
+    <ion-list>
+      <div ion-item *ngFor="let item of selectedItems">{{item.title}}</div>
+    </ion-list>
+  </div>
 </ion-content>

@@ -35,7 +35,7 @@ export class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
       { title: 'A Test of Buttons', component: ActionSheetPage},
-      { title: 'Tommy Time', component: CheckmarksPage}
+      { title: 'Pizza Time', component: CheckmarksPage}
     ];
   }
 
