@@ -43,7 +43,6 @@ export class CheckmarksPage {
     let grossItemFound = false;
      this.selectedItems.forEach( item => {
         if (item.gross) {
-          console.log("there's a gross one still here.")
           grossItemFound = true;
         }
      });
